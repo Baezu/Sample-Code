@@ -1,0 +1,27 @@
+/// <summary>    
+/// Checks to see if the input only contains Numbers     
+/// </summary>     
+/// <param name="anyString" />Input In</param>              
+/// <returns>True/False</returns>              
+public static bool IsNumeric(string anyString)    
+{                 
+ if (String.IsNullOrEmpty(anyString))     
+ {                      
+  anyString = "";                  
+ }    
+   
+ if (anyString.Length > 0)                  
+ {                      
+  char[] ca = anyString.ToCharArray();                      
+  for (int i = 0; i < ca.Length; i++)                      
+  {                          
+   if (ca[i] > 57 || ca[i] < 48)                              
+   return false;                      
+  }                      
+  return true;                  
+ }                  
+ else                  
+ {                      
+  return false;                  
+ }              
+}       
